@@ -1,22 +1,22 @@
 ﻿<div class="card">
     <div class="card-body">
 
+        <h3>Details : </h3>
 
-            <label>Nom : </label><br />
-        @MonJeu.Nom<br />
-            <label>Genre : </label><br />
-        @MonJeu.Genre<br />
-            <label>Date de Sortie : </label><br />
-        @MonJeu.DatedeSortie<br />
-            <label>Note : </label><br />
-            @MonJeu.Note
+        <label>Nom : </label><br />
+        <strong>@MonJeu.Nom</strong><br />
 
+        <label>Genre : </label><br />
+        <strong>@MonJeu.Genre</strong><br />
+
+        <label>Date de Sortie : </label><br />
+        <strong>@MonJeu.DatedeSortie</strong><br />
+
+        <label>Note : </label><br />
+        <strong>@MonJeu.Note / 5</strong>
 
     </div>
 </div>
 
 @code {
-    [Parameter]
-    public Jeu MonJeu { get; set; }
-
 }

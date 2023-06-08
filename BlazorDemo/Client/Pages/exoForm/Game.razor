@@ -1,71 +1,57 @@
 ﻿@page "/Jeux"
 
-  <style>
+<style>
     .sidebar {
-      background-color: #f5f5f5;
-      padding: 10px;
-      flex-direction: column;
-      height: 100%;
+        background-color: #f5f5f5;
+        padding: 10px;
+        flex-direction: column;
+        height: 100%;
     }
     
     .content {
-      margin-top: 10px;
-      padding: 10px;
-      background-color: #e9ecef;
+        margin-top: 10px;
+        padding: 10px;
     }
     
     .sidebar ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
     
     .sidebar li {
-      margin-bottom: 5px;
+        margin-bottom: 5px;
     }
-  </style>
+</style>
 
 <div class="container">
     <div class="row">
-      <div class="col-md-3">
-        <div class="sidebar">
-          <ul>
-            <Virtualize Items="@Jeux" Context="j">
-                <li><a href="" @onclick="() => Selection(j.Id)" @onclick:preventDefault >@j.Nom</a></li>
-            </Virtualize>
-          </ul>
+        <div class="col-md-3">
+            <div class="sidebar">
+                <ul>
+                    <Virtualize Items="@Jeux" Context="j">
+                        <li><a href="" @onclick="() => Selection(j.Id)" @onclick:preventDefault >@j.Nom</a></li>
+                    </Virtualize>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="col-md-9">
-        <div class="row">
-          <div class="col-md-6 content">
-            <h2>Ajouter un jeu :</h2>
-                <FormulaireJeu RetourneJeu="RecevoirReponse"></FormulaireJeu>
-          </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-6 content">
+                    <FormulaireJeu RetourneJeu="RecevoirReponse"></FormulaireJeu>
+                </div>
+            </div>
+            @if (JeuSelectionne is not null)
+            {
+            <div class="row">
+                <div class="col-md-6 content">
+                    <GameDetails MonJeu="JeuSelectionne"></GameDetails>
+                </div>
+            </div>
+            }
         </div>
-        <div class="row">
-          <div class="col-md-6 content">
-            <h2>Details : </h2>
-                <GameDetails MonJeu="JeuSelectionne"></GameDetails>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
 @code {
-    public List<Jeu> Jeux { get; set; } = new List<Jeu>();
-    public Jeu? JeuSelectionne { get; set; } = null;
-
-    private void RecevoirReponse(Jeu jeu)
-    {
-        jeu.Id = Jeux.Count + 1;
-        Jeux.Add(jeu);
-    }
-
-    private void Selection(int id)
-    {
-        JeuSelectionne = Jeux[id - 1];
-    }
-
 }

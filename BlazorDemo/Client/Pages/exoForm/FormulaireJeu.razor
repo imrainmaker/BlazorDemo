@@ -1,39 +1,30 @@
 ﻿<div class="card">
     <div class="card-body">
+        <h3>Ajouter un jeu :</h3>
         <EditForm Model="MonJeu" OnValidSubmit="()=>OnSubmit(MonJeu)">
+            
             <DataAnnotationsValidator />
 
             <label>Nom : </label><br />
             <InputText @bind-Value="MonJeu.Nom" /><br />
+
             <label>Genre : </label><br />
             <InputText @bind-Value="MonJeu.Genre" /><br />
+
             <label>Date de Sortie : </label><br />
             <InputDate @bind-Value="MonJeu.DatedeSortie" /><br />
+
             <label>Note : </label><br />
-            <InputNumber @bind-Value="MonJeu.Note" /><br />
+            <InputNumber @bind-Value="MonJeu.Note" /><br /><br />
+
+
             <button class="btn btn-primary">Valider</button>
 
             <ValidationSummary />
+
         </EditForm>
     </div>
 </div>
 
 @code {
-    public Jeu MonJeu { get; set; }
-    public List<Jeu> Jeux { get; set; }
-
-    public FormulaireJeu()
-    {
-        MonJeu = new Jeu();
-        Jeux = new List<Jeu>();
-    }
-
-    [Parameter]
-    public EventCallback<Jeu> RetourneJeu { get; set; }
-
-    public void OnSubmit(Jeu jeu)
-    {
-        RetourneJeu.InvokeAsync(jeu);
-    }
-
 }
