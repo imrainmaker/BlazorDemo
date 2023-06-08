@@ -1,0 +1,22 @@
+﻿<div class="card">
+    <div class="card-body">
+
+
+            <label>Nom : </label><br />
+        @MonJeu.Nom<br />
+            <label>Genre : </label><br />
+        @MonJeu.Genre<br />
+            <label>Date de Sortie : </label><br />
+        @MonJeu.DatedeSortie<br />
+            <label>Note : </label><br />
+            @MonJeu.Note
+
+
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Jeu MonJeu { get; set; }
+
+}
