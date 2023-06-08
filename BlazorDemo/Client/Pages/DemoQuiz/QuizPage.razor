@@ -6,6 +6,7 @@
 {  
     <h2>Veuillez entrer votre nom</h2>
     <input type="text" @bind-value="@Nom"/>
+    <button class="btn btn-primary">Valider</button>
 }
 else if(Nom is not null && NumeroQuestion < 10)
 {
@@ -15,7 +16,7 @@ else
 {
     CalculScore(AllQuiz, Reponses);
     <div class="alert alert-primary" role="alert">
-        <h3>Score : @Score / @AllQuiz.Count</h3>
+        <h3>Score de @Nom : @Score / @AllQuiz.Count</h3>
     </div>
     @foreach (Quiz q in AllQuiz)
     {
