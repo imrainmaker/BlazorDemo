@@ -1,0 +1,19 @@
+﻿@page "/ListeDeProduits"
+@inject HttpClient http
+<PageTitle>Mes Produits</PageTitle>
+<h1>Liste de produit</h1>
+
+@foreach(Product p in LesProduits)
+{
+    <FicheProduit Produit="p"></FicheProduit><br />
+}
+
+@code {
+    public List<Product> LesProduits { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        LesProduits = await http.GetFromJsonAsync<List<Product>>("data/products.json") ?? new();
+    }
+
+}

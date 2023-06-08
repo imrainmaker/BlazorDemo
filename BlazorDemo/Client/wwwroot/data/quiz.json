@@ -1,0 +1,62 @@
+[
+  {
+    "ID": 1,
+    "Question": "Le créateur de Facebook est Marc Zuckerberg.",
+    "Reponse": true,
+    "Explication": "Vrai. Mark Zuckerberg est le créateur de Facebook, le célèbre réseau social."
+  },
+  {
+    "ID": 2,
+    "Question": "Le contenu d'une page HTML se met dans la balise <head>.",
+    "Reponse": false,
+    "Explication": "Faux. Le contenu principal d'une page HTML est généralement placé dans la balise <body>, pas dans la balise <head>."
+  },
+  {
+    "ID": 3,
+    "Question": "Le système d'exploitation le plus couramment utilisé sur les ordinateurs personnels est Windows.",
+    "Reponse": true,
+    "Explication": "Vrai. Windows est le système d'exploitation le plus répandu sur les ordinateurs personnels dans le monde."
+  },
+  {
+    "ID": 4,
+    "Question": "Un navigateur web est utilisé pour accéder aux sites web.",
+    "Reponse": true,
+    "Explication": "Vrai. Les navigateurs web tels que Chrome, Firefox et Safari sont utilisés pour accéder aux sites web en affichant leur contenu."
+  },
+  {
+    "ID": 5,
+    "Question": "Le langage de programmation le plus populaire pour le développement web est JavaScript.",
+    "Reponse": true,
+    "Explication": "Vrai. JavaScript est le langage de programmation le plus couramment utilisé pour le développement web, permettant d'ajouter des fonctionnalités interactives aux sites."
+  },
+  {
+    "ID": 6,
+    "Question": "Le terme 'URL' signifie Uniform Resource Locator.",
+    "Reponse": true,
+    "Explication": "Vrai. URL est l'acronyme de 'Uniform Resource Locator', qui est une adresse web utilisée pour spécifier l'emplacement d'une ressource sur Internet."
+  },
+  {
+    "ID": 7,
+    "Question": "Le service de messagerie électronique de Google s'appelle Gmail.",
+    "Reponse": true,
+    "Explication": "Vrai. Gmail est le service de messagerie électronique proposé par Google."
+  },
+  {
+    "ID": 8,
+    "Question": "Les fichiers avec l'extension '.jpg' sont utilisés pour des images en format vectoriel.",
+    "Reponse": false,
+    "Explication": "Faux. Les fichiers avec l'extension '.jpg' sont utilisés pour des images en format raster, aussi appelé bitmap, et non en format vectoriel."
+  },
+  {
+    "ID": 9,
+    "Question": "Le Wi-Fi est une technologie sans fil utilisée pour la connexion à Internet.",
+    "Reponse": true,
+    "Explication": "Vrai. Le Wi-Fi est une technologie sans fil qui permet la connexion à Internet, généralement utilisée dans les réseaux locaux."
+  },
+  {
+    "ID": 10,
+    "Question": "Le terme 'hashtag' est principalement utilisé sur le réseau social Twitter.",
+    "Reponse": true,
+    "Explication": "Vrai. Le terme 'hashtag' est principalement utilisé sur le réseau social Twitter. Les hashtags sont des mots-clés ou des phrases précédés du symbole # utilisés pour regrouper et rechercher des contenus spécifiques sur Twitter. Ils sont couramment utilisés pour marquer les tweets sur des sujets populaires, des événements ou des discussions en cours."
+  }
+]

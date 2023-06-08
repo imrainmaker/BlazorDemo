@@ -1,0 +1,12 @@
+﻿<div class="card">
+    <div class="card-body">
+        <h4>Question @Questions.id</h4>
+        <label><h3>@Questions.Question</h3></label><br />
+        
+        <button type="button" class="btn btn-success" @onclick="()=>ResponseToParent(true)">Vrai</button> &nbsp;
+        <button type="button" class="btn btn-danger" @onclick="()=>ResponseToParent(false)">Faux</button>
+    </div>
+</div>
+
+@code {
+}

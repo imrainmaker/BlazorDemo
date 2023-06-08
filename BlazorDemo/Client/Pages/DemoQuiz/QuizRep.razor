@@ -1,0 +1,23 @@
+﻿<div class="card">
+    <div class="card-body">
+        <h5>Question @Questions.id</h5><br />
+        <h4>@Questions.Question</h4><br />
+
+        @if (Reponses == Questions.Reponse)
+        {
+            <h5><strong> Correcte, la réponse était bien @(Questions.Reponse ? "'Vrai'" : "'Faux'")</strong></h5>
+        }
+        else
+        {
+            <h5><strong> Raté, la réponse était @(Questions.Reponse ? "'Vrai'" : "'Faux'")</strong></h5>
+        }
+        <br /><br />
+        <h5> Explication : </h5>
+        <em>@Questions.Explication</em>
+
+
+    </div>
+</div>
+
+@code {
+}

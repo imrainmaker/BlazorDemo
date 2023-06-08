@@ -1,0 +1,25 @@
+﻿@inject NavigationManager nvm
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+
+    <strong>@Produit.Name</strong><br />
+    <em>@Produit.Description</em><br />
+    <strong>Prix: @Produit.Price</strong>
+
+  </div>
+  <button class="btn btn-primary" @onclick="_=>GoToDetails(Produit.Id)">Details</button>
+</div>
+
+@code {
+
+    [EditorRequired]
+    [Parameter]
+    public Product Produit { get; set; }
+
+    private void GoToDetails(Guid Pid)
+    {
+        nvm.NavigateTo($"/Details/{Pid}", false);
+    }
+
+}

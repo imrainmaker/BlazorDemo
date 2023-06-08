@@ -1,0 +1,31 @@
+﻿@page "/Quiz"
+@inject HttpClient http
+<PageTitle>Quiz</PageTitle>
+
+@if(Nom is null)
+{  
+    <h2>Veuillez entrer votre nom</h2>
+    <input type="text" @bind-value="@Nom"/>
+}
+else if(Nom is not null && NumeroQuestion < 10)
+{
+    <QuizBox Questions="AllQuiz[NumeroQuestion]" Reponse="RecevoirReponse" ></QuizBox>
+}
+else
+{
+    CalculScore(AllQuiz, Reponses);
+    <div class="alert alert-primary" role="alert">
+        <h3>Score : @Score / @AllQuiz.Count</h3>
+    </div>
+    @foreach (Quiz q in AllQuiz)
+    {
+        <QuizRep Questions="q" Reponses="Reponses[q.id -1]" Score="Score"></QuizRep>
+        <br />
+    }
+
+
+}
+
+
+@code {
+}
