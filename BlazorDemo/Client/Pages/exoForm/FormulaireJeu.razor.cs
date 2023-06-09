@@ -5,11 +5,12 @@ namespace BlazorDemo.Client.Pages.exoForm
 {
     public partial class FormulaireJeu
     {
-        private Jeu MonJeu { get; set; }
+        private Jeu? MonJeu { get; set; }
 
         public FormulaireJeu()
         {
             MonJeu = new Jeu();
+            MonJeu.DatedeSortie = DateTime.Now;
 
         }
 
@@ -18,7 +19,10 @@ namespace BlazorDemo.Client.Pages.exoForm
 
         private void OnSubmit(Jeu jeu)
         {
+            MonJeu = new Jeu();
+            MonJeu.DatedeSortie = DateTime.Now;
             RetourneJeu.InvokeAsync(jeu);
+            
         }
     }
 }
